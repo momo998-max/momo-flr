@@ -1,0 +1,18 @@
+<div fxLayout="row">
+  <div fxFlex="100">
+    <form [formGroup]="loginForm9" class="form2">
+      <div fxFlex="50" class="addform">
+        <span class="label"><mat-label class="mat-title label" for="libelle">Libelle</mat-label></span><br>
+        <input matInput type="text" formControlName="libelle" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.libelle.errors }" />
+        <div *ngIf="submitted && f.libelle.errors" class="invalid-feedback" >
+          <div *ngIf="f.libelle.errors.required">libelle is required</div>
+        </div><br><br><br>
+        <button mat-fab color="warn" [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+          Creer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

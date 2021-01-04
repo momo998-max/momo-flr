@@ -1,0 +1,48 @@
+<div fxLayout="row">
+  <div fxFlex="100">
+    <form [formGroup]="loginForm7" class="form2">
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="libelle">Libelle</mat-label>
+        <input matInput type="text" formControlName="libelle" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.libelle.errors }" />
+        <div *ngIf="submitted && f.libelle.errors" class="invalid-feedback" >
+          <div *ngIf="f.libelle.errors.required">libelle is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="description">Description</mat-label>
+        <input matInput type="text" formControlName="description" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.description.errors }" />
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback" >
+          <div *ngIf="f.description.errors.required">description d evaluation is required</div>
+        </div><br><br><br>
+      </div>
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="referentiel">Ajout de Competences</mat-label><br><br><br><br>
+        <mat-selection-list formControlName="groupedecompetences" dense #shoes>
+          <mat-list-option>
+            <h1 class="selectref">HTML</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">CSS</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">JAVASCRIPT</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">ANGULAR</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">BOOSTRAP</h1>
+          </mat-list-option>
+        </mat-selection-list>
+        <div *ngIf="submitted && f.groupedecompetences.errors" class="invalid-feedback" >
+          <div *ngIf="f.groupedecompetences.errors.required">Groupe De Competences d'admission is required</div>
+        </div><br><br><br>
+        <button [disabled]="loading" class="bouttonCreer">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+          Creer
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

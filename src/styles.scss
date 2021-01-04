@@ -1,0 +1,322 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color:rgb(227, 230, 230) }
+.infoUser{
+  position: relative;
+  color: black;
+}
+.boutton-menu{
+  color: white;
+  text-align: center;
+  border: solid #7e0f00;
+  background-color: #7e0f00;
+  width: 100%;
+  cursor: pointer;
+}
+#logout{
+
+}
+.login{
+  position: relative;
+  text-align: center;
+  height: 20%;
+  border-radius: 1px;
+}
+.matcard{
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+  text-align: center;
+  border-top: solid darkgray;
+}
+.logbutton{
+  background-color:#7e0f00;
+}
+.creareUser{
+  text-align: center;
+}
+.mat-grid-tile{
+  color: #263238;
+  background-color: white;
+}
+.listusers{
+  position: relative;
+  top: 80px;
+  margin-left: 3%;
+  text-align: center;
+}
+.shower{
+  position: relative;
+  width: 10%;
+  top: 5px;
+  color: white;
+}
+.mat-grid-list{
+  background-color: #7e0f00;
+}
+#delete{
+  width: 6%;
+  background-color: red;
+}
+.show{
+  background-color: #7e0f00;
+  border-radius: 4px;
+}
+.delete{
+  background-color: red;
+  border-radius: 4px;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.imgprofil{
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+}
+#afficher{
+  width: 20%;
+  background-color: #7e0f00;
+  // text-align: center;
+}
+#afficher2{
+  width: 20%;
+  background-color: #7e0f00;
+  // text-align: center;
+}
+.mat-button{
+  width: 100%;
+  background-color: #263238;
+  border-radius: 3px;
+  border: #ffffff;
+  outline: white;
+}
+.mat-list-item{
+
+}
+.h1{
+  text-align: center;
+  color: white;
+}
+.h2{
+  text-align: center;
+  color: #263238;
+  font-size: 20px;
+  font-style: italic;
+}
+.interfaceUsers{
+  height: 300%;
+  border: solid #7e0f00;
+  border-radius: 1px;
+}
+.diviii2{
+  background-color:#7e0f00;
+}
+.diviii3{
+  background-color: red;
+}
+.a{
+  color: white;
+  text-decoration: none;
+}
+.showAllUsers{
+  background-color: #7e0f00;
+  border-radius: 1px;
+  position: relative;
+  text-align: center;
+  height: 5%;
+  width: 100%;
+  top: 5px;
+  color: white;
+}
+.flexx{
+  background-color: red;
+}
+.h{
+  text-align: center;
+  //margin: 0 auto;
+  color: white;
+  font-size: 25px;
+  border-style: solid;
+  border-width: 1px;
+  // border-radius: ;
+}
+.img{
+  height: 45px;
+}
+.mat-sidenav-container{
+  text-align: center;
+  height: 177%;
+  width: 100%;
+  background-color: #7e0f00;
+}
+.menu{
+  position: relative;
+  color: white;
+  top: 0px;
+  width: 4px;
+
+}
+.div3{
+  //background-color: red;
+  height: 500px;
+}
+.div2{
+  background-color: red;
+}
+.mat-sidenav , mat-sidenav-container{
+  text-align: center;
+  padding:0px;
+  background-color: #7e0f00;
+  width: 100%;
+}
+.mat-sidenav{
+  text-align: center;
+  background-color: #7e0f00;
+  width: 100%;
+  height: 100%;
+}
+.log{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.inputt{
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  top: 250px;
+
+
+}
+.toolbar1{
+  position: relative;
+  width: 22%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1%;
+  background-color: #7e0f00;
+  height: 40px;
+  border-radius: 10px;
+  top: 200px;
+
+}
+.mat-toolbar{
+  background-color: #7e0f00;
+  height: 50px;
+}
+.logbutton{
+  position: relative;
+  text-align: center;
+  left: 55%;
+  top: 250px;
+  background-color:#7e0f00;
+  height: 50px;
+  width: 6%;
+  border-radius: 12px;
+  border: solid #7e0f00;
+  cursor: pointer;
+}
+.bouttonCreer{
+  position: relative;
+  top: 60px;
+  background-color: #7e0f00;
+  height: 40px;
+  width: 10%;
+}
+.form-control{
+  color: white;
+  height: 30px;
+  width: 15.5%;
+  border-radius: 8px;
+  border: solid #7e0f00;
+  background-color: white;
+}
+.form-control2{
+  position: relative;
+  top: 50px;
+  float: right;
+  margin-right: 30%;
+  height: 60px;
+  width: 50%;
+  color: black;
+  border: solid #7e0f00;
+  background-color: #ffffff;
+  border-width: 1px;
+}
+.selectref{
+  color: white;
+  border-bottom: dashed #7e0f00;
+  background-color: #263238;
+  width: 15%;
+}
+.form2{
+  position: relative;
+  top: 100px;
+  text-align: center;
+  border: solid #7e0f00;
+  border-radius: 10px;
+
+}
+.addform{
+  border: solid #7e0f00;
+  height: 700px;
+  background-color: azure;
+}
+.label{
+  color: #263238;
+  font-size: 15px;
+  border-left: solid #007e78;
+  border-width: 1px;
+}
+.label2{
+  color: #263238;
+  font-size: 15px;
+  border-right: solid #7e0f00;
+  border-width: 1px;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 50px;
+}
+.div4{
+  position: relative;
+  top: 100px;
+  height: 100px;
+}
+.formdiv{
+  position: relative;
+  width: 50%;
+  text-align: center;
+  height: 500px;
+  border: solid #263238;
+}
+.bigTitle{
+  color: #263238;
+  border-bottom: solid #7e0f00;
+}
+.suggestion{
+  color: red;
+  height: 3px;
+  font-size: 10px;
+}
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+.title{
+  text-align: center;
+}
+table {
+  width: 80%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

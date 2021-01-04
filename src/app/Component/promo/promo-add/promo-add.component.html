@@ -1,0 +1,81 @@
+<div fxLayout="row">
+  <div fxFlex="100">
+    <form [formGroup]="loginForm3"  class="form2">
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="langue">Langue</mat-label>
+        <input matInput type="text" formControlName="langue" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.langue.errors }" />
+        <div *ngIf="submitted && f.langue.errors" class="invalid-feedback" >
+          <div *ngIf="f.langue.errors.required">langue is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="titre">Titre</mat-label>
+        <input matInput type="text" formControlName="titre" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.titre.errors }" />
+        <div *ngIf="submitted && f.titre.errors" class="invalid-feedback" >
+          <div *ngIf="f.titre.errors.required">Titre is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="description">Description</mat-label>
+        <input matInput type="text" formControlName="description" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.description.errors }" />
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback" >
+          <div *ngIf="f.description.errors.required">Description is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="lieu">Lieu</mat-label>
+        <input matInput type="text" formControlName="lieu" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.lieu.errors }" />
+        <div *ngIf="submitted && f.lieu.errors" class="invalid-feedback" >
+          <div *ngIf="f.lieu.errors.required">Lieu is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="fabrique">Fabrique</mat-label>
+        <input matInput type="text" formControlName="fabrique" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.fabrique.errors }" />
+        <div *ngIf="submitted && f.fabrique.errors" class="invalid-feedback" >
+          <div *ngIf="f.fabrique.errors.required">Fabrique is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="dateDebut">Date de Debut</mat-label>
+        <input matInput type="date" formControlName="dateDebut" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.telephone.errors }"/>
+        <div *ngIf="submitted && f.dateDebut.errors" class="invalid-feedback" >
+          <div *ngIf="f.dateDebut.errors.required">Date de Debut is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="dateFin">Date de Fin</mat-label>
+        <input matInput type="date" formControlName="dateFin" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.dateFin.errors }" />
+        <div *ngIf="submitted && f.dateFin.errors" class="invalid-feedback" >
+          <div *ngIf="f.dateFin.errors.required">Date de Fin is required</div>
+        </div><br><br><br>
+      </div>
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="referentiel">Ajout de referentiels</mat-label><br><br><br><br>
+        <mat-selection-list formControlName="referentiels" dense #shoes>
+          <mat-list-option>
+            <h1 class="selectref">Developpeur Web</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">Data artisant</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">Referant Digital</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">Referentiel 4</h1>
+          </mat-list-option>
+          <mat-list-option>
+            <h1 class="selectref">Referentiel 5</h1>
+          </mat-list-option>
+        </mat-selection-list>
+        <mat-label class="mat-title label2" for="Avatar">Ajouter un fichier excel</mat-label>
+        <input multiple type="file" formControlName="apprenants" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.avatar.errors }" />
+        <div *ngIf="submitted && f.apprenants.errors" class="invalid-feedback" >
+          <div *ngIf="f.apprenants.errors.required">Avatar is required</div>
+        </div><br><br><br>
+        <button [disabled]="loading" class="bouttonCreer">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+          Creer
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+
+<div fxLayout="row">
+  <div fxFlex="100">
+    <form [formGroup]="loginForm4" class="form2">
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="presentation">Presentation</mat-label>
+        <input matInput type="text" formControlName="presentation" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.username.errors }" />
+        <div *ngIf="submitted && f.presentation.errors" class="invalid-feedback" >
+          <div *ngIf="f.presentation.errors.required">presentation is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="criteresdevaluation">Criteres D'evaluation</mat-label>
+        <input matInput type="text" formControlName="criteresdevaluation" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.criteresdevaluation.errors }" />
+        <div *ngIf="submitted && f.criteresdevaluation.errors" class="invalid-feedback" >
+          <div *ngIf="f.criteresdevaluation.errors.required">criteres d evaluation is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="criteresdadmission">Criteres D'admission</mat-label>
+        <input matInput type="text" formControlName="criteresdadmission" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.criteresdadmission.errors }" />
+        <div *ngIf="submitted && f.criteresdadmission.errors" class="invalid-feedback" >
+          <div *ngIf="f.criteresdadmission.errors.required">criteres d'admission is required</div>
+        </div><br><br><br>
+      </div>
+      <div fxFlex="50" class="addform">
+        <mat-label class="mat-title label2" for="groupedecompetences">Groupe de Competences</mat-label>
+        <input matInput type="number" formControlName="groupedecompetences" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.groupedecompetences.errors }" />
+        <div *ngIf="submitted && f.groupedecompetences.errors" class="invalid-feedback" >
+          <div *ngIf="f.groupedecompetences.errors.required">Groupe de Competences is required</div>
+        </div><br><br><br>
+        <button  [disabled]="loading" class="bouttonCreer">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+          Creer
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>

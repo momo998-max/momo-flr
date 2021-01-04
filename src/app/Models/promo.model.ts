@@ -1,0 +1,29 @@
+export class Promo {
+  id?: number;
+  // @ts-ignore
+  langue: string;
+  // @ts-ignore
+  titre: string;
+  // @ts-ignore
+  description: string;
+  // @ts-ignore
+  lieu: string;
+  // @ts-ignore
+  fabrique: string;
+  // @ts-ignore
+  dateDebut: string;
+  // @ts-ignore
+  dateFin: string;
+  // @ts-ignore
+  archive: boolean;
+  // @ts-ignore
+  profilsDeSorties: number;
+  // @ts-ignore
+  referentiels: string;
+  // @ts-ignore
+  groupes: number;
+  // @ts-ignore
+  apprenants: number;
+  // @ts-ignore
+  formateurs: number;
+}

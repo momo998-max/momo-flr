@@ -1,0 +1,47 @@
+<div class="mat-toolbar" color="warn" >
+  <div fxLayout="row">
+    <div fxFlex="10">
+      <img class="img" src="assets/images/rv5Z1feQ_400x400.jpg"/>
+    </div>
+    <div fxFlex="100">
+      <div fxFlex="6">
+        <button routerLink="/" class="boutton-menu"><mat-icon>account_balance</mat-icon><br>Home</button>
+      </div>
+      <div fxFlex="10">
+        <button class="boutton-menu" [matMenuTriggerFor]="param"><mat-icon>settings</mat-icon>Parametres</button>
+        <mat-menu #param="matMenu">
+          <button mat-menu-item routerLink="/app-promo">Promos</button>
+          <button mat-menu-item  routerLink="/app-referentiel">Referentiels</button>
+          <button mat-menu-item routerLink="/app-groupe-de-competences">Groupe de Competences</button>
+          <button mat-menu-item routerLink="/app-competence">Competences</button>
+          <button mat-menu-item routerLink="/app-profil-de-sortie">Profil de sortie</button>
+        </mat-menu>
+      </div>
+      <div fxFlex="6">
+        <button class="boutton-menu"g [matMenuTriggerFor]="menu"><mat-icon> list_alt</mat-icon><br>Briefs</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="showMefunction()"><mat-icon>account_box</mat-icon>Users</button>
+          <button mat-menu-item (click)="showMe2function()"><mat-icon>supervised_user_circle</mat-icon>Profils</button>
+        </mat-menu>
+      </div>
+      <div fxFlex="6">
+        <button class="boutton-menu" [matMenuTriggerFor]="param"><mat-icon>inbox</mat-icon><br>Rendu</button>
+        <mat-menu #param="matMenu">
+          <button mat-menu-item (click)="showMefunction()">Promos</button>
+          <button mat-menu-item (click)="showMe2function()">Referentiels</button>
+        </mat-menu>
+      </div>
+      <div fxFlex="6">
+        <button class="boutton-menu" [matMenuTriggerFor]="menu"><mat-icon>comment</mat-icon><br>Forum</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="showMefunction()"><mat-icon>account_box</mat-icon>Users</button>
+          <button mat-menu-item (click)="showMe2function()"><mat-icon>supervised_user_circle</mat-icon>Profils</button>
+        </mat-menu>
+      </div>
+      <div fxFlex="95">
+        <button class="boutton-menu" id="logout" (click)="logout()">Deconnexion</button>
+      </div>
+    </div>
+  </div>
+</div>
+

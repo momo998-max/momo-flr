@@ -1,0 +1,82 @@
+<div fxLayout="row" class="div3" fxLayoutAlign="space-between">
+  <div class="interfaceUsers"  fxFlex="100">
+    <div fxFlex="7" class="listusers">
+      <button mat-button class="showAllUsers" routerLink="/app-promo-add">Nouveau</button><br><br><br>
+    </div>
+    <div fxFlex="80"  class="listusers">
+      <h1 class="bigTitle">LISTE DES PROMOS</h1>
+      <div class="example-container mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" >
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="titre">
+            <th mat-header-cell *matHeaderCellDef><p class="title">Titre</p></th>
+            <td class="td" mat-cell *matCellDef="let element"> {{element.titre}} </td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="fabrique">
+            <th mat-header-cell *matHeaderCellDef><p class="title">Fabrique</p></th>
+            <td class="td" mat-cell *matCellDef="let element"> {{element.fabrique}}</td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef><p class="title">Description</p></th>
+            <td class="td" mat-cell *matCellDef="let element"> {{element.description}}</td>
+          </ng-container>
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef><p class="title">Actions</p></th>
+            <td class="td" mat-cell *matCellDef="let element">
+              <button class="show" (click)="detailPromoFunction()"><mat-icon>arrow_right_alt</mat-icon></button>
+              <button class="delete"><mat-icon>delete</mat-icon></button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div fxLayout="row" class="div3" fxLayoutAlign="space-between">
+  <div fxFlex="30" fxHide="{{detailPromo}}" class="listusers">
+    <h1 class="bigTitle">REFERENTIEL</h1>
+      <mat-card class="matcard">
+        <mat-card-header>
+          <mat-card-title>Developpement Web</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>Developper une application web mobile</mat-card-content>
+        <mat-card-actions>
+          <button class="show" >details</button>
+          <button class="show" >groupes</button>
+        </mat-card-actions>
+      </mat-card>
+  </div>
+  <div fxFlex="30" fxHide="{{detailPromo}}" class="listusers">
+    <h1 class="bigTitle">REFERENTIEL</h1>
+    <mat-card class="matcard">
+      <mat-card-header>
+        <mat-card-title>Referent Digital</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>Developper une application web mobile</mat-card-content>
+      <mat-card-actions>
+        <button class="show" >details</button>
+        <button class="show" >groupes</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxFlex="30" fxHide="{{detailPromo}}" class="listusers">
+    <h1 class="bigTitle">REFERENTIEL</h1>
+    <mat-card class="matcard">
+      <mat-card-header>
+        <mat-card-title>Data Artisan</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>Developper une application web mobile</mat-card-content>
+      <mat-card-actions>
+        <button class="show" >details</button>
+        <button class="show" >groupes</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

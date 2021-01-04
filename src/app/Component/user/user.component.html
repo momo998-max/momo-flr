@@ -1,0 +1,80 @@
+<div fxLayout="row">
+  <div fxFlex="100">
+    <form [formGroup]="loginForm2" (ngSubmit)="onSubmit()" class="form2">
+      <div fxFlex="50" class="addform">
+        <h1 class="bigTitle">AJOUT D'UTILISATEUR</h1>
+        <mat-label class="mat-title label2" for="username">Username</mat-label>
+        <input matInput type="text" formControlName="username" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback" >
+          <div *ngIf="f.username.errors.required">Username is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="password">Password</mat-label>
+        <input matInput type="password" formControlName="password" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback" >
+          <div *ngIf="f.password.errors.required">Password is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="Nom">Prenom</mat-label>
+        <input matInput type="text" formControlName="prenom" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.prenom.errors }" />
+        <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback" >
+          <div *ngIf="f.prenom.errors.required">Prenom is required</div>
+        </div><br><br><br>
+        <mat-label class="mat-title label2" for="Nom">Nom</mat-label>
+        <input matInput type="text" formControlName="nom" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.nom.errors }" />
+        <div *ngIf="submitted && f.nom.errors" class="invalid-feedback" >
+          <div *ngIf="f.nom.errors.required">Nom is required</div>
+        </div><br><br><br>
+      <mat-label class="mat-title label2" for="username">Email</mat-label>
+      <input matInput type="text" formControlName="email" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.email.errors }" />
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback" >
+        <div *ngIf="f.email.errors.required">Email is required</div>
+      </div><br><br><br>
+        <mat-label class="mat-title label2" for="telephone">Telephone</mat-label>
+        <input matInput type="text" formControlName="telephone" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.telephone.errors }"/>
+        <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback" >
+          <div *ngIf="f.telephone.errors.required">Telephone is required</div>
+        </div><br><br><br>
+      </div>
+      <div fxFlex="50" class="addform">
+        <h1 class="bigTitle">AJOUT D'UTILISATEUR</h1>
+      <mat-label class="mat-title label2" for="Genre">Genre</mat-label>
+      <input matInput type="text" formControlName="genre" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.genre.errors }" />
+      <div *ngIf="submitted && f.genre.errors" class="invalid-feedback" >
+        <div *ngIf="f.genre.errors.required">Genre is required</div>
+      </div><br><br><br>
+      <mat-label class="mat-title label2">Profil</mat-label><br><br><br><br>
+      <mat-select formControlName="profil" >
+        <mat-option *ngFor="let profil of profils" value="{{ profil.id }}">
+          {{ profil.libelle }}
+        </mat-option>
+      </mat-select>
+      <div *ngIf="submitted && f.profil.errors" class="invalid-feedback" >
+        <div *ngIf="f.profil.errors.required">Profil is required</div>
+      </div><br><br><br>
+      <mat-label class="mat-title label2" for="Statut">statut</mat-label>
+      <input matInput type="text" formControlName="statut" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.statut.errors }" />
+      <div *ngIf="submitted && f.statut.errors" class="invalid-feedback" >
+        <div *ngIf="f.statut.errors.required">Telephone is required</div>
+      </div><br><br><br>
+      <mat-label class="mat-title label2" for="Avatar">Avatar</mat-label>
+      <input multiple type="file" formControlName="avatar" class="form-control2" [ngClass]=" { 'is-invalid': submitted &&
+        f.avatar.errors }" />
+      <!--<div *ngIf="submitted && f.avatar.errors" class="invalid-feedback" >
+        <div *ngIf="f.avatar.errors.required">Avatar is required</div>
+      </div><br><br><br>-->
+        <button class="bouttonCreer" [disabled]="loading">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+          Creer
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
